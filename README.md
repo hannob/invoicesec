@@ -6,12 +6,12 @@ See also: <https://invoice.secvuln.info/>
 This repository provides test cases / exploits for potential XML security
 vulnerabilities in electronic invoice software.
 
-All test cases are available in CII and UBL formats. The subdirectory [examples](
-examples/) contains simple example files without exploits.
+All test cases are available in CII and UBL formats. The subdirectory `examples`
+contains simple example files without exploits.
 
 ## XXE
 
-The subdirectory [xxe](xxe/) contains various test cases for a simple XXE attack.
+The subdirectory `xxe` contains various test cases for a simple XXE attack.
 
 All test cases include a file from the local filesystem through an entity and add it to
 both the seller's and buyer's names in the invoice. Any software that reads and displays
@@ -30,7 +30,7 @@ enabled by default.
 ## Blind XXE
 
 In cases where the user does not see any output, a blind XXE may be able to exfiltrate
-files. Test cases are provided in the [bxxe](bxxe/) directory.
+files. Test cases are provided in the `bxxe` directory.
 
 Blind XXE attacks use so-called parameter entities to construct a URL with the content
 of a file appended. They require an online and an offline component. To test these, the

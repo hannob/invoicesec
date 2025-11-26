@@ -1,0 +1,19 @@
+#!/bin/sh
+# SPDX-License-Identifier: EUPL-1.2
+
+MYDIR="$(dirname "$0")"
+
+if [ -z "$1" ]; then
+	echo "Usage:"
+	echo -e "\t$0 [host]"
+	exit 1
+fi
+
+if [ -e "$1" ]; then
+	echo "$1 already exists"
+	exit 1
+fi
+
+cp -r $MYDIR/bxxe "$1-bxxe"
+
+sed -i -e "s:bxxe.example.com:$1:g" "$1-bxxe"/local/*.xml "$1-bxxe"/online/*.dtd
